@@ -1,0 +1,61 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`section-title`
+
+
+@demo demo/section-title.html 
+-->
+
+<dom-module id="section-title">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        
+      }
+      h2 {
+        display: table;
+        border-spacing: 5px;
+        margin: 0 -5px;
+      }
+      .icon, .text {
+        display: table-cell;
+      }
+      .icon {
+        min-width: 30px;
+        height: 30px;
+        padding-right: 5px;
+        border-bottom: 2px #e57200 solid;
+      }
+      .text {
+        width: 100%;
+        border-bottom: 2px #006eab solid;
+      }
+
+    </style>
+    <h2>
+      <em class$="icon [[icon-name]]"></em>
+      <span class="text">[[title]]</span>
+    </h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'section-title',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'Section title goes here',
+        },
+        iconName: {
+          type: String
+        }
+      },
+
+    });
+  </script>
+</dom-module>
